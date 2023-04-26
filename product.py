@@ -40,4 +40,11 @@ class Product:
             Returns:
                 str: returns string of formatted product info
             """
-            pass
+            product_info = (
+                f"Product ID: {id}"
+                f"Product Name: {self.name}"
+                f"Product Description: {self.description}"
+                f"Product Price: ${self.price:.2f}"
+            )
+
+            return product_info
