@@ -57,4 +57,10 @@ class Product:
             Returns:
                 str: return string of formatted private product info
             """
-            pass
+            supplier_info = (
+                f"The following supplier information is for Product {id}"
+                f"Supplier Name: {self.__supplier}"
+                f"Purchase Price: {self.__purchase_price}"
+            )
+
+            return supplier_info
