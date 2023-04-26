@@ -23,4 +23,9 @@ class Product:
             supplier (str): name of the supplier product is purchased from
             purchase_price (float): price that the store pays for the product
         """
-        pass
+        self.id = id
+        self.name = name
+        self.desciption = description
+        self.price = price
+        self.__supplier = supplier
+        self.__purchase_price = purchase_price
