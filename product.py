@@ -48,3 +48,16 @@ class Product:
             )
 
             return product_info
+
+        def __view_supplier_info(self, id: int) -> str:
+            """This private class method takes a product id and returns
+            the supplier name and price the store pays per unit
+            of the product
+
+            Args:
+                id (int): product id
+
+            Returns:
+                str: return string of formatted private product info
+            """
+            pass
