@@ -29,3 +29,15 @@ class Product:
         self.price = price
         self.__supplier = supplier
         self.__purchase_price = purchase_price
+
+        def view_product_info(self, id: int) -> str:
+            """This method takes the product id and prints
+            out all the public attribute information
+
+            Args:
+                id (int): product id
+
+            Returns:
+                str: returns string of formatted product info
+            """
+            pass
