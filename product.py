@@ -38,7 +38,7 @@ class Product:
                 str: string of formatted product info
             """
             product_info = (
-                f"Product ID: {id}"
+                f"Product ID: {self.id}"
                 f"Product Name: {self.name}"
                 f"Product Description: {self.description}"
                 f"Product Price: ${self.price:.2f}"
