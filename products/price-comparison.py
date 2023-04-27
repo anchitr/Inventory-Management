@@ -15,6 +15,8 @@ def compare_price(products: list) -> str:
     for i in products:
         print(f"{i.product_id}: {i.name}")
 
+    print("-" * 15)  # Separator line between product info and input prompt
+
     # Retrieve user input for the two products being compared
     try:
         user_product1_id = int(
