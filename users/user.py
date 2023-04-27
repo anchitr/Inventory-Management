@@ -27,4 +27,4 @@ class User:
         Returns:
             str: Greeting message adressing the user
         """
-        pass
+        return f"Greetings {self.user_info[0]} {self.user_info[1]}!"
