@@ -67,3 +67,11 @@ class Product:
             f"Supplier Name: {self.product_dict['supplier_info'][0]}\n"
             f"Purchase Price: {self.product_dict['supplier_info'][1]}\n"
         )
+
+    def update_price(self, new_price: float) -> None:
+        """This method allows user to update the price of a product
+
+        Args:
+            new_price (float): The new price of the product
+        """
+        pass
