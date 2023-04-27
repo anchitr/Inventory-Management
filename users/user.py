@@ -19,3 +19,12 @@ class User:
         self.user_info = []
 
         self.user_info.append(self.first_name, self.last_name, (self.__password))
+
+    def __repr__(self) -> str:
+        """This function returns the first and last name of the
+        user in a greeting message
+
+        Returns:
+            str: Greeting message adressing the user
+        """
+        pass
