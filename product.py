@@ -12,8 +12,9 @@ class Product:
         supplier: str,
         purchase_price: float,
     ) -> None:
-        """This constructor takes multiple values and creates a product
-        whose attributes can be updated through various class methods
+        """This constructor takes multiple values and creates a product dict
+        whose attributes are contained within a list and can be updated
+        through various class methods
 
         Args:
             id (int): id number of the product (must be unique)
@@ -29,6 +30,17 @@ class Product:
         self.price = price
         self.__supplier = supplier
         self.__purchase_price = purchase_price
+
+        product_dict = {
+            self.id: [
+                self.name,
+                self.desciption,
+                self.price,
+                (self.__supplier, self.__purchase_price),
+            ]
+        }
+
+        return product_dict
 
         def __repr__(self) -> str:
             """This method returns all public attribute information
