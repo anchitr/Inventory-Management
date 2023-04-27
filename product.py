@@ -79,3 +79,11 @@ class Product:
                 self.product_dict["price"] = new_price
         except:
             return "Please enter a valid new price"
+
+    def update_name(self, new_name: str) -> None:
+        """This method allows the user to update the name of the product
+
+        Args:
+            new_name (str): The new name of the product
+        """
+        pass
