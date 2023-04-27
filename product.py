@@ -86,4 +86,7 @@ class Product:
         Args:
             new_name (str): The new name of the product
         """
-        pass
+        try:
+            self.product_dict["name"] = new_name
+        except:
+            return "Please enter a valid name"
