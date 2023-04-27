@@ -41,4 +41,14 @@ class User:
             new_last_name (str): New last name of the user. Defaults to None.
             If no input is given, value will remain the same.
         """
-        pass
+        # Handle if no new_first_name is provided
+        if new_first_name is None:
+            pass
+        else:
+            self.user_info[0] = new_first_name  # Assign value in user_info list
+
+        # Handle if no new_last_name is provided
+        if new_last_name is None:
+            pass
+        else:
+            self.user_info[1] = new_last_name  # Assign value in user_info list
