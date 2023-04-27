@@ -1,4 +1,15 @@
 def compare_price(products: list) -> str:
+    """This function takes a list of product objects, prints them out and
+    requests the user to enter the ids of the products whose prices they
+    want compared
+
+    Args:
+        products (list): List of product objects
+
+    Returns:
+        str: Message indicating whether the first product is more
+        expensive or cheaper than the second product
+    """
     for i in products:
         print(f"{i.product_id}: {i.name}")
 
