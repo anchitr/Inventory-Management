@@ -74,4 +74,8 @@ class Product:
         Args:
             new_price (float): The new price of the product
         """
-        pass
+        try:
+            if (self.price != new_price) and (new_price > 0):
+                self.product_dict["price"] = new_price
+        except:
+            return "Please enter a valid new price"
