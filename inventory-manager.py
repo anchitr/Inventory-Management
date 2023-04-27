@@ -8,8 +8,6 @@ This is a program that allows a manager of a store to view store inventory,
 product details, add new products, and monitor stock transactions.
 """
 
-from product import Product
-
 # TODO:
 # - [x] Write program docstring
 # - Create Product class
