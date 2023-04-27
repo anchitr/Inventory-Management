@@ -91,3 +91,15 @@ class Product:
 
         except:
             return "Please enter a valid name"
+
+    def __ge__(self, other: object) -> bool:
+        """A magic method that checks if a product's price is greater
+        than or equal to anothers
+
+        Args:
+            other (object): product object being compared
+
+        Returns:
+            bool: returns True or False based on condition
+        """
+        pass
