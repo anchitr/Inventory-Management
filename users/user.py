@@ -12,4 +12,10 @@ class User:
             last_name (str): Last name of the user
             password (str): Password decided by user (should be simple)
         """
-        pass
+        self.first_name = first_name
+        self.last_name = last_name
+        self.__password = password
+
+        self.user_info = []
+
+        self.user_info.append(self.first_name, self.last_name, (self.__password))
