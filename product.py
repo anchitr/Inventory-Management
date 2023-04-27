@@ -88,5 +88,6 @@ class Product:
         """
         try:
             self.product_dict["name"] = new_name
+
         except:
             return "Please enter a valid name"
