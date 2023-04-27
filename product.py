@@ -5,7 +5,7 @@ class Product:
 
     def __init__(
         self,
-        id: int,
+        product_id: int,
         name: str,
         description: str,
         price: float,
@@ -13,66 +13,57 @@ class Product:
         purchase_price: float,
     ) -> None:
         """This constructor takes multiple values and creates a product dict
-        whose attributes are contained within a list and can be updated
-        through various class methods
+        whose attributes can be updated through various class methods
 
         Args:
-            id (int): id number of the product (must be unique)
+            id (int): id number of the product
             name (str): name of the product
             description (str): short description of the product
             price (float): selling price of the product
             supplier (str): name of the supplier product is purchased from
             purchase_price (float): price that the store pays for the product
         """
-        self.id = id
+
+        self.product_id = product_id
         self.name = name
-        self.desciption = description
+        self.description = description
         self.price = price
         self.__supplier = supplier
         self.__purchase_price = purchase_price
 
-        product_dict = {
-            self.id: [
-                self.name,
-                self.desciption,
-                self.price,
-                (self.__supplier, self.__purchase_price),
-            ]
+        self.product_dict = {
+            "product_id": product_id,
+            "name": name,
+            "description": description,
+            "price": price,
+            "supplier_info": (self.__supplier, self.__purchase_price),
         }
 
-        return product_dict
+    def __str__(self) -> str:
+        """This method returns all public attribute information
+        of a product in a formatted string
 
-        def __repr__(self) -> str:
-            """This method returns all public attribute information
-            of a product in a formatted string
+        Returns:
+            str: string of formatted product info
+        """
 
-            Returns:
-                str: string of formatted product info
-            """
-            product_info = (
-                f"Product ID: {self.id}"
-                f"Product Name: {self.name}"
-                f"Product Description: {self.description}"
-                f"Product Price: ${self.price:.2f}"
-            )
+        return (
+            f"Product ID: {self.product_dict['product_id']}\n"
+            f"Product Name: {self.product_dict['name']}\n"
+            f"Product Description: {self.product_dict['description']}\n"
+            f"Product Price: ${self.product_dict['price']:.2f}\n"
+        )
 
-            return product_info
+    def __view_supplier_info(self) -> str:
+        """This private class method takes a product id and returns
+        the supplier name and price the store pays per unit
+        of the product
 
-        def __view_supplier_info(self, id: int) -> str:
-            """This private class method takes a product id and returns
-            the supplier name and price the store pays per unit
-            of the product
-
-            Args:
-                id (int): product id
-
-            Returns:
-                str: return string of formatted private product info
-            """
-            supplier_info = (
-                f"The following supplier information is for Product {id}"
-                f"Supplier Name: {self.__supplier}"
-                f"Purchase Price: {self.__purchase_price}"
-            )
-
-            return supplier_info
+        Returns:
+            str: return string of formatted private product info
+        """
+        return (
+            f"The supplier information for the {self.product_dict['name']} is:\n"
+            f"Supplier Name: {self.product_dict['supplier_info'][0]}\n"
+            f"Purchase Price: {self.product_dict['supplier_info'][1]}\n"
+        )
