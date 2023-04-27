@@ -9,4 +9,10 @@ def view_all_products(product_lst: list) -> list:
     Returns:
         list: List of product info strings
     """
-    pass
+    all_product_info = []
+
+    for item in product_lst:
+        output = item.__str__()
+        all_product_info.append(output)
+
+    return all_product_info
