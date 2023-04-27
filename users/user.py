@@ -28,3 +28,17 @@ class User:
             str: Greeting message adressing the user
         """
         return f"Greetings {self.user_info[0]} {self.user_info[1]}!"
+
+    def update_user_name(
+        self, new_first_name: str = None, new_last_name: str = None
+    ) -> None:
+        """This class method is used to update the first and last name
+        of the user
+
+        Args:
+            new_first_name (str): New first name of the user. Defaults to None.
+            If no input is given, value will remain the same.
+            new_last_name (str): New last name of the user. Defaults to None.
+            If no input is given, value will remain the same.
+        """
+        pass
