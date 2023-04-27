@@ -10,6 +10,8 @@ def compare_price(products: list) -> str:
         str: Message indicating whether the first product is more
         expensive or cheaper than the second product
     """
+    print("Here are the following products in inventory:")
+
     for i in products:
         print(f"{i.product_id}: {i.name}")
 
