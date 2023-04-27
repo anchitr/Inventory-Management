@@ -13,7 +13,7 @@ def compare_price(products: list) -> str:
     except IndexError:
         return "One of the Product ID's is invalid. Please try again."
 
-    product_lst[user_product1_id - 1] > product_lst[user_product2_id - 1]
+    products[user_product1_id - 1] > products[user_product2_id - 1]
 
     if True:
         return f"Product {user_product1_id} is more expensive than {user_product2_id}"
