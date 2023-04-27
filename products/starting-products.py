@@ -12,9 +12,9 @@ def init_product_list() -> list:
     starting_products = [
         [1, "Sony Walkman", "Retro MP3 player", 132.26, "Sony", 70.31],
         [2, "Radio", "AM/FM listening device", 25.97, "RadioShack", 13.21],
-        [3, "iPod", "A portable MP3 player", 278.34, "Apple", 189.04],
+        [3, "iPod Nano", "A portable MP3 player", 278.34, "Apple", 189.04],
         [4, "iPhone", "Cellphone and MP3 player", 793.99, "Apple", 589.07],
-        [5, "iPod Nano", "Ultra-portable MP3 player", 589.13, "Apple", 461.84],
+        [5, "Kann Max", "Audiophile grade HiFi DAP", 2788.13, "A&K", 734.84],
     ]
 
     product_lst = []
