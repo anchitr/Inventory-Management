@@ -17,12 +17,13 @@ def init_product_list() -> list:
         [5, "Kann Max", "Audiophile grade HiFi DAP", 2788.13, "A&K", 734.84],
     ]
 
-    product_lst = []
+    product_lst = []  # Initialize empty list to contain product objects
 
     for item in starting_products:
-        args = item
+        args = item  # Pass in arguments
+
         product = Product(*args)
 
-        product_lst.append(product)
+        product_lst.append(product)  # Append new Product object to list
 
     return product_lst
