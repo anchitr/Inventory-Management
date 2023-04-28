@@ -54,7 +54,7 @@ class Product:
             f"Product Price: ${self.product_dict['price']:.2f}\n"
         )
 
-    def __view_supplier_info(self) -> str:
+    def __view_supplier_details(self) -> str:
         """This private class method takes a product id and returns
         the supplier name and price the store pays per unit
         of the product
