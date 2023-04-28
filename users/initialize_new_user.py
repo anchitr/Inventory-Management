@@ -13,15 +13,16 @@ def init_new_user() -> object:
         user_name = input(
             "Please enter your first and last name separated by a space: "
         )
-        input_info = user_name.split(" ")
+        names = user_name.split(" ")
 
-        user_password = input("Please enter a simple password: ")
+        first_name = names[0]
+        last_name = names[1]
 
-        new_user = User(
-            first_name=input_info[0], last_name=input_info[1], password=user_password
-        )
+    except IndexError:
+        return "User name is invalid. Please try again."
 
-        return new_user
+    password = input("Please enter a simple password: ")
 
-    except:
-        return "Could not create user. Please try again."
+    new_user = User(first_name=first_name, last_name=last_name, password=password)
+
+    return new_user
