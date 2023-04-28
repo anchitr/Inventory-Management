@@ -13,6 +13,7 @@ def view_all_products(product_lst: list) -> list:
 
     for item in product_lst:
         output = item.__str__()
+
         all_product_info.append(output)
 
     return all_product_info

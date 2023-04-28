@@ -3,22 +3,22 @@ class User:
     about the user currently operating the program
     """
 
-    def __init__(self, first_name: str, last_name: str, password: str) -> None:
+    def __init__(
+        self, first_name: str = "John", last_name: str = "Doe", password: str = "pw"
+    ) -> None:
         """This constructor takes the user's info as arguments and stores
         it for viewing and confirming actions in the main program
 
         Args:
-            first_name (str): First name of the user
-            last_name (str): Last name of the user
-            password (str): Password decided by user (should be simple)
+            first_name (str): First name of the user. Defaults to 'John'.
+            last_name (str): Last name of the user. Defaults to 'Doe'.
+            password (str): Password decided by user. Defaults to 'pw'.
         """
         self.first_name = first_name
         self.last_name = last_name
         self.__password = password
 
-        self.user_info = []
-
-        self.user_info.append(self.first_name, self.last_name, (self.__password))
+        self.user_info = [self.first_name, self.last_name, self.__password]
 
     def __repr__(self) -> str:
         """This function returns the first and last name of the
