@@ -18,7 +18,7 @@ class User:
 
         self.user_info = []
 
-        self.user_info.append(self.first_name, self.last_name, (self.__password))
+        self.user_info.append(self.first_name, self.last_name, self.__password)
 
     def __repr__(self) -> str:
         """This function returns the first and last name of the
