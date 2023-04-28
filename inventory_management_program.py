@@ -40,6 +40,7 @@ def main_menu() -> str:
 
 
 if __name__ == "__main__":
+    # Start with greeting the user
     print(greeting.hello_user())
 
     # Initialize list of default starting products
