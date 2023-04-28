@@ -48,7 +48,7 @@ class Product:
         """
 
         return (
-            f"Product ID: {self.product_dict['product_id']}\n"
+            f"\nProduct ID: {self.product_dict['product_id']}\n"
             f"Product Name: {self.product_dict['name']}\n"
             f"Product Description: {self.product_dict['description']}\n"
             f"Product Price: ${self.product_dict['price']:.2f}\n"
