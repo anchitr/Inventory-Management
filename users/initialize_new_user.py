@@ -18,8 +18,20 @@ def init_new_user() -> object:
     # Get user password
     password = input("Please enter a simple password: ")
 
-    new_user = User(
-        first_name=user_first_name, last_name=user_last_name, password=password
-    )
+    # If user does not enter input for a field, assign default values to vars
+    if user_first_name == "":
+        user_first_name = "John"
+
+    if user_last_name == "":
+        user_last_name = "Doe"
+
+    if password == "":
+        password = "password"
+
+    # Create list of arguments
+    args = [user_first_name, user_last_name, password]
+
+    # Pass in the args and create a new User object
+    new_user = User(*args)
 
     return new_user
