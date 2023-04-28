@@ -13,7 +13,13 @@ from products import product, starting_products, price_comparison
 from inventory import initialize_inventory
 from users import initialize_new_user
 from viewing import view_all_inv, view_all_prod, view_single_prod, view_supplier_info
-from updating import update_quantity, update_prod_price, update_prod_name
+from updating import (
+    update_quantity,
+    update_prod_price,
+    update_prod_name,
+    add_new_product,
+    update_inv,
+)
 
 
 # TODO:
@@ -135,7 +141,7 @@ if __name__ == "__main__":
                     )
 
                     # Prompt user if they want product or supplier info
-                    print("\n Would you like p(R)oduct or s(U)pplier info?")
+                    print("Would you like p(R)oduct or s(U)pplier info?")
 
                     user_single_prod_view = input(
                         "\nEnter the character of your choice: "
@@ -195,7 +201,16 @@ if __name__ == "__main__":
                     print(price_change)  # Print the resulting string
 
                 elif user_prod_update.upper() == "A":
-                    pass
+                    # Call the new_product function and reassign it to the
+                    # initialized product list var
+                    products = add_new_product.new_product(products)
+
+                    # Reassign the variable initialized at the start of main
+                    current_inventory = update_inv.inv_prod_update(
+                        current_inventory, products
+                    )
+
+                    print("\nInventory was successfully updated!")  # Success message
 
                 # Handle invalid inputs inside product update section
                 else:
