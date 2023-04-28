@@ -74,11 +74,12 @@ class Product:
         Args:
             new_price (float): The new price of the product
         """
-        try:
-            if (self.price != new_price) and (new_price > 0):
-                self.product_dict["price"] = new_price
-        except:
-            return "Please enter a valid new price"
+        # Check if price is different and greater than 0
+        if (self.price != new_price) and (new_price > 0):
+            self.price = new_price  # Update price class attribute
+
+            # Update price in product dict
+            self.product_dict["price"] = new_price
 
     def update_name(self, new_name: str) -> None:
         """This method allows the user to update the name of the product
@@ -86,19 +87,29 @@ class Product:
         Args:
             new_name (str): The new name of the product
         """
-        try:
-            self.product_dict["name"] = new_name
+        # Update class attribute to new name
+        self.name = new_name
 
-        except:
-            return "Please enter a valid name"
+        # Update product dict info with new name
+        self.product_dict["name"] = new_name
 
     def get_price(self) -> float:
-        """This method gets the price of the product
+        """This method gets the price of the product. For unittest
+        purposes only.
 
         Returns:
             float: Product price as float
         """
         return self.price
+
+    def get_name(self) -> str:
+        """This method gets the name of a product. For unittest
+        purposes only.
+
+        Returns:
+            str: Name of the product
+        """
+        return self.name
 
     def __gt__(self, other: object) -> bool:
         """A magic method that checks if a product's price is greater
