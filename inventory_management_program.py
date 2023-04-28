@@ -161,6 +161,11 @@ if __name__ == "__main__":
 
                 print(quant_change)
 
+                updated_inventory = view_all_inv.view_all_inventory(current_inventory)
+
+                for item in updated_inventory:
+                    print(item)
+
             # If user selects to update Product info
             elif user_selection.upper() == "P":
                 print(
