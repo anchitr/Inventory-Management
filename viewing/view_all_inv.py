@@ -19,7 +19,7 @@ def view_all_inventory(inventory_lst: list) -> list:
 
     for lst in inventory_lst:
         # Insert formatted string of id, name, and quantity
-        output = f"{lst[0].product_id : <5}{lst[0].name : ^15}{lst[1] : ^5}"
+        output = f"{lst[0].product_id : <5}{lst[0].name : <15}{lst[1] : <5}"
 
         all_inventory_info.append(output)  # Append to final list
 
