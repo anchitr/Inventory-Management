@@ -1,4 +1,4 @@
-from product import Product  # Import Product class
+from .product import Product  # Import Product class
 
 
 def init_product_list() -> list:
