@@ -1,4 +1,4 @@
-from user import User
+from .user import User
 
 
 def init_new_user() -> list:
@@ -11,7 +11,7 @@ def init_new_user() -> list:
     """
     try:
         user_name = input(
-            "Hello! Please enter your first and last name separated by a space: "
+            "Please enter your first and last name separated by a space: "
         )
         input_info = user_name.split(" ")
 
