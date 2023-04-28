@@ -10,4 +10,19 @@ def inv_prod_update(inventory_lst: list, product_lst: list) -> list:
     Returns:
         list: _description_
     """
-    pass
+
+    # Check if the length of the lists are equal (should not be)
+    if len(inventory_lst) == len(product_lst):
+        return "No new products to update"
+
+    else:
+        # Assign the new product object to a variable
+        new_product = product_lst[-1]
+
+        # Create a list with the product object and a starting quantity of 10
+        add_to_inv = [new_product, 10]
+
+        # Append the new list of prod obj and quantity to inventory list
+        inventory_lst.append(add_to_inv)
+
+        return inventory_lst  # Return update inventory list
