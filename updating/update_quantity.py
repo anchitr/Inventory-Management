@@ -46,3 +46,7 @@ def change_quant(inventory_lst: list) -> str:
             prod_quant[1] -= minus_quant
 
             return f"\n{minus_quant} units were subtracted from inventory!\n"
+
+    # Catch all for invalid options entered by the user
+    else:
+        return "\nInvalid option. Please try again."
