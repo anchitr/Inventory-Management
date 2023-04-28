@@ -1,7 +1,7 @@
 from .user import User
 
 
-def init_new_user() -> list:
+def init_new_user() -> object:
     """This function will be executed upon running the inventory
     management program and will request the user to enter their
     information.
@@ -9,21 +9,19 @@ def init_new_user() -> list:
     Returns:
         list: The program will return a list of user info
     """
-    try:
-        user_name = input(
-            "Please enter your first and last name separated by a space: "
-        )
-        input_info = user_name.split(" ")
+    # try:
+    user_name = input("Please enter your first and last name separated by a space: ")
+    input_info = user_name.split(" ")
 
-        print(input_info)
+    print(input_info)
 
-        user_password = input("Please enter a simple password: ")
+    user_password = input("Please enter a simple password: ")
 
-        new_user = User(
-            first_name=input_info[0], last_name=input_info[1], password=user_password
-        )
+    new_user = User(
+        first_name=input_info[0], last_name=input_info[1], password=user_password
+    )
 
-        return new_user.user_info
+    return new_user
 
-    except:
-        return "Could not create user. Please try again."
+    # except:
+    #     return "Could not create user. Please try again."
