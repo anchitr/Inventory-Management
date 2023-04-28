@@ -15,11 +15,11 @@ def change_quant(inventory_lst: list) -> str:
 
     prod_quant = inventory_lst[user_pid - 1]
 
-    operation = input("Are you (A)dding or (S)ubtracting from the quantity? ")
+    operation = input("\nAre you (A)dding or (S)ubtracting from the quantity? ")
 
     if operation.upper() == "A":
         # Prompt user on quantity to add
-        add_quant = int(input("How many units are being added? "))
+        add_quant = int(input("\nHow many units are being added? "))
 
         prod_quant[1] += add_quant
 
@@ -27,11 +27,11 @@ def change_quant(inventory_lst: list) -> str:
 
     elif operation.upper() == "S":
         # Prompt user on quantity to subtract
-        minus_quant = int(input("How many units are being subtracted? "))
+        minus_quant = int(input("\nHow many units are being subtracted? "))
 
         # Check if current quantity lower than user minus quant
         if prod_quant[1] < minus_quant:
-            return f"\nError! There are only {prod_quant[1]} units left."
+            return f"\nError! There are only {prod_quant[1]} unit(s) left."
 
         # Else subtract quantity as expected
         else:
