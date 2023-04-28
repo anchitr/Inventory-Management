@@ -12,7 +12,7 @@ from greeters import greeting, salutation
 from products import product, starting_products, price_comparison
 from inventory import initialize_inventory
 from users import initialize_new_user
-from viewing import view_all_inv, view_all_prod, view_single_prod
+from viewing import view_all_inv, view_all_prod, view_single_prod, view_supplier_info
 from updating import update_quantity, update_prod_price, update_prod_name
 
 
@@ -72,9 +72,9 @@ if __name__ == "__main__":
     assert test_product.get_price() == 368.73, "Price unittest failed!"
 
     # Call update_name method on test product
-    test_product.update_name("Walkman")
+    test_product.update_name("Real iPod")
 
-    assert test_product.get_name() == "Walkman", "Name unittest failed!"
+    assert test_product.get_name() == "Real iPod", "Name unittest failed!"
 
     # ---------------- END UNITTEST SECTION ----------------
 
@@ -134,9 +134,26 @@ if __name__ == "__main__":
                         "\nYou have chosen to search for a single product's information.\n"
                     )
 
-                    prod_info = view_single_prod.view_single_product(products)
+                    # Prompt user if they want product or supplier info
+                    print("\n Would you like p(R)oduct or s(U)pplier info?")
 
-                    print(prod_info)
+                    user_single_prod_view = input(
+                        "\nEnter the character of your choice: "
+                    )
+
+                    # If user selects information on product
+                    if user_single_prod_view.upper() == "R":
+                        # Assign return string of func to variable
+                        prod_info = view_single_prod.view_single_product(products)
+
+                        print(prod_info)
+
+                    # If user selects to view supplier info
+                    elif user_single_prod_view.upper() == "U":
+                        # Assign return string of func to variable
+                        supplier_info = view_supplier_info.get_supp_info(products)
+
+                        print(supplier_info)
 
                 # Catch all for invalid characters in viewing block
                 else:
@@ -159,10 +176,13 @@ if __name__ == "__main__":
 
             # If user selects to update Product info
             elif user_selection.upper() == "P":
-                print("\nWould you like to update product (N)ame or p(R)ice")
+                print(
+                    "\nWould you like to (A)dd a new product, update product (N)ame or p(R)ice"
+                )
 
                 user_prod_update = input("\nEnter the character of your choice: ")
 
+                # Handle user choice of add, update name, or update price
                 if user_prod_update.upper() == "N":
                     name_change = update_prod_name.change_name(products)
 
@@ -173,6 +193,9 @@ if __name__ == "__main__":
                     price_change = update_prod_price.change_price(products)
 
                     print(price_change)  # Print the resulting string
+
+                elif user_prod_update.upper() == "A":
+                    pass
 
                 # Handle invalid inputs inside product update section
                 else:
