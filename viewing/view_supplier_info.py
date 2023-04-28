@@ -11,4 +11,20 @@ def get_supp_info(product_lst: list) -> str:
     Returns:
         str: String of supplier info for product
     """
-    pass
+
+    # Catch invalid user input
+    try:
+        user_pid_input = int(input("\nPlease enter the Product ID of the product: "))
+
+    except ValueError:
+        return "\nInvalid Product ID. Please try again."
+
+    # Catch invalid product id
+    try:
+        product = product_lst[user_pid_input - 1]
+
+    except IndexError:
+        return "\nProduct ID does not exist. Please try again."
+
+    # Return the result of the view_supplier_details private class method
+    return product._Product__view_supplier_details()
