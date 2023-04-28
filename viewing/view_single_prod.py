@@ -15,9 +15,9 @@ def view_single_product(product_lst: list) -> str:
     try:
         user_pid_input = int(input("Please enter the Product ID of the product: "))
 
-        for item in product_lst:
-            if item.product_id == user_pid_input:
-                return f"\n{item.__str__()}"
+        user_product = product_lst[user_pid_input - 1]
 
     except IndexError:
         return "That Product ID does not exist. Please try again. "
+
+    return user_product.__str__()
