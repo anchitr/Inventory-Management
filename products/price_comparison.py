@@ -42,11 +42,13 @@ def compare_price(products: list) -> str:
         return "One of the Product ID's is invalid. Please try again."
 
     # Assign the boolean output of the operation to result var
-    result = first_product.price > second_product.price  # Compare prices of products
+    result = first_product > second_product  # Compare prices of products
 
     # Handle output based on result
     if result is True:
-        return f"{first_product.name} is more expensive than {second_product.name}"
+        return (
+            f"\nThe {first_product.name} is more expensive than {second_product.name}"
+        )
 
     else:
-        return f"Product {first_product.name} is cheaper than {second_product.name}"
+        return f"\nThe {first_product.name} is cheaper than {second_product.name}"
