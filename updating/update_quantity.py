@@ -18,16 +18,24 @@ def change_quant(inventory_lst: list) -> str:
     operation = input("\nAre you (A)dding or (S)ubtracting from the quantity? ")
 
     if operation.upper() == "A":
-        # Prompt user on quantity to add
-        add_quant = int(input("\nHow many units are being added? "))
+        try:
+            # Prompt user on quantity to add
+            add_quant = int(input("\nHow many units are being added? "))
+
+        except ValueError:
+            return "Invalid amount. Please try again."
 
         prod_quant[1] += add_quant
 
         return f"\n{add_quant} units were added to inventory!\n"
 
     elif operation.upper() == "S":
-        # Prompt user on quantity to subtract
-        minus_quant = int(input("\nHow many units are being subtracted? "))
+        try:
+            # Prompt user on quantity to subtract
+            minus_quant = int(input("\nHow many units are being subtracted? "))
+
+        except ValueError:
+            return "Invalid amount. Please try again."
 
         # Check if current quantity lower than user minus quant
         if prod_quant[1] < minus_quant:
