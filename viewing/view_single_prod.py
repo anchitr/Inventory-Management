@@ -11,7 +11,6 @@ def view_single_product(product_lst: list) -> str:
     Returns:
         str: Output of product info
     """
-    print("You have chosen to search for a single product's information.\n")
 
     try:
         user_pid_input = int(input("Please enter the Product ID of the product: "))
