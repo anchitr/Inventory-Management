@@ -32,4 +32,4 @@ def change_name(product_lst: list) -> str:
     # Call update_price class method of Product
     product.update_name(new_name)
 
-    return f"\n{product.name}'s name was updated to {new_name}"
+    return f"\nProduct {product.product_id}'s name was updated to {new_name}"
