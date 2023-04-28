@@ -13,6 +13,10 @@ def change_price(product_lst: list) -> str:
         # Prompt user for which product they want to update
         user_pid_input = int(input("\nPlease enter the Product ID of the product: "))
 
+    except ValueError:
+        return "\nInvalid input. Please try again."
+
+    try:
         # Assign the product object from the list to a variable
         product = product_lst[user_pid_input - 1]
 
