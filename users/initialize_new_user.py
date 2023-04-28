@@ -9,17 +9,14 @@ def init_new_user() -> object:
     Returns:
         list: The program will return a list of user info
     """
-    try:
-        user_name = input(
-            "Please enter your first and last name separated by a space: "
-        )
-        names = user_name.split(" ")
+    user_name = input("Please enter your first and last name separated by a space: ")
+    names = user_name.split(" ")
 
+    if len(names) == 2:
         first_name = names[0]
         last_name = names[1]
-
-    except IndexError:
-        return "User name is invalid. Please try again."
+    else:
+        return "Invalid name input. Please try again."
 
     password = input("Please enter a simple password: ")
 
