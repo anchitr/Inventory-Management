@@ -15,9 +15,13 @@ def init_new_user() -> list:
         )
         input_info = user_name.split(" ")
 
+        print(input_info)
+
         user_password = input("Please enter a simple password: ")
 
-        new_user = User(input_info[0], input_info[1], user_password)
+        new_user = User(
+            first_name=input_info[0], last_name=input_info[1], password=user_password
+        )
 
         return new_user.user_info
 
