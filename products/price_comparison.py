@@ -26,6 +26,11 @@ def compare_price(products: list) -> str:
             input("Please enter the id of the second comparison product: ")
         )
 
+    # Handle invalid user input
+    except ValueError:
+        return "\nInvalid input. Please try again."
+
+    try:
         # Store first product object
         first_product = products[user_product1_id - 1]
 
@@ -36,9 +41,11 @@ def compare_price(products: list) -> str:
     except IndexError:
         return "One of the Product ID's is invalid. Please try again."
 
-    first_product > second_product  # Compare prices of products
+    # Assign the boolean output of the operation to result var
+    result = first_product.price > second_product.price  # Compare prices of products
 
-    if True:
+    # Handle output based on result
+    if result is True:
         return f"{first_product.name} is more expensive than {second_product.name}"
 
     else:
