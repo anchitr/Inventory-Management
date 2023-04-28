@@ -63,7 +63,7 @@ class Product:
             str: return string of formatted private product info
         """
         return (
-            f"The supplier information for the {self.product_dict['name']} is:\n"
+            f"\nThe supplier information for the {self.product_dict['name']} is:\n"
             f"Supplier Name: {self.product_dict['supplier_info'][0]}\n"
             f"Purchase Price: {self.product_dict['supplier_info'][1]}\n"
         )
