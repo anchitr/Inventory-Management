@@ -92,6 +92,14 @@ class Product:
         except:
             return "Please enter a valid name"
 
+    def get_price(self) -> float:
+        """This method gets the price of the product
+
+        Returns:
+            float: Product price as float
+        """
+        return self.price
+
     def __gt__(self, other: object) -> bool:
         """A magic method that checks if a product's price is greater
         than or equal to anothers
