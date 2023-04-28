@@ -121,4 +121,4 @@ class Product:
         Returns:
             bool: returns True or False based on condition
         """
-        return self.price >= other.price
+        return self.price > other.price
