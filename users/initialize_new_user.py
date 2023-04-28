@@ -13,8 +13,6 @@ def init_new_user() -> object:
     user_name = input("Please enter your first and last name separated by a space: ")
     input_info = user_name.split(" ")
 
-    print(input_info)
-
     user_password = input("Please enter a simple password: ")
 
     new_user = User(
