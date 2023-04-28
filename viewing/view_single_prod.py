@@ -15,9 +15,13 @@ def view_single_product(product_lst: list) -> str:
     try:
         user_pid_input = int(input("Please enter the Product ID of the product: "))
 
+    except ValueError:
+        return "\nInvalid input. Please try again."
+
+    try:
         user_product = product_lst[user_pid_input - 1]
 
-        return user_product.__str__()
-
     except IndexError:
-        return "That Product ID does not exist. Please try again. "
+        return "\nProduct ID does not exist. Please try again."
+
+    return user_product.__str__()
