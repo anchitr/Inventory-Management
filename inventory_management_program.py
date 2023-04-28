@@ -191,7 +191,14 @@ if __name__ == "__main__":
                         current_inventory, products
                     )
 
-                    print("\nInventory was successfully updated!")  # Success message
+                    print("\nInventory was successfully updated!\n")  # Success message
+
+                    updated_inventory = view_all_inv.view_all_inventory(
+                        current_inventory
+                    )
+
+                    for item in updated_inventory:
+                        print(item)
 
                 # Handle invalid inputs inside product update section
                 else:
