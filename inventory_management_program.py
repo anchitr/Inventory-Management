@@ -40,12 +40,6 @@ def main_menu() -> str:
 
 
 if __name__ == "__main__":
-    # Start with greeting the user
-    print(greeting.hello_user())
-
-    # Initialize list of default starting products
-    products = starting_products.init_product_list()
-
     # ---------------- BEGIN UNITTEST SECTION ---------------------------------
 
     # Initialize instance of test product
@@ -64,6 +58,12 @@ if __name__ == "__main__":
     assert test_product.get_name() == "Real iPod", "Name unittest failed!"
 
     # ---------------- END UNITTEST SECTION -----------------------------------
+
+    # Start with greeting the user
+    print(greeting.hello_user())
+
+    # Initialize list of default starting products
+    products = starting_products.init_product_list()
 
     # Initialize list of default starting inventory
     current_inventory = initialize_inventory.init_inventory(products)
