@@ -191,6 +191,9 @@ if __name__ == "__main__":
                     # initialized product list var
                     products = add_new_product.new_product(products)
 
+                    print("\nNew product was added!")
+                    print(products[-1].__str__())  # Print info of new product
+
                     # Reassign the variable initialized at the start of main
                     current_inventory = update_inv.inv_prod_update(
                         current_inventory, products
@@ -213,7 +216,7 @@ if __name__ == "__main__":
             else:
                 print("\nInvalid option. Please try again.")
 
-        # -------------- END HANDLING OF UPDATE OPTIONS ----------------------
+        # -------------- END HANDLING OF UPDATE OPTIONS -----------------------
 
         # -------------- BEGIN HANDLING OF COMPARE OPTION ---------------------
         elif user_main_choice.upper() == "C":
@@ -221,6 +224,15 @@ if __name__ == "__main__":
 
         # -------------- END HANDLING OF COMPARE OPTION -----------------------
 
+        # -------------- BEGIN HANDLING OF QUIT OPTION ------------------------
+
         elif user_main_choice.upper() == "Q":
             print(salutation.good_bye())
             break
+
+        # -------------- END HANDLING OF COMPARE OPTION -----------------------
+        # Catch all for invalid main menu options
+        else:
+            print("\nInvalid option. Please try again.")
+
+        # -------------------------------- END PROGRAM ------------------------
