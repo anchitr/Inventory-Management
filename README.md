@@ -9,7 +9,7 @@ Create an interactive command-line text program that allows a user to manage inv
 - Compare prices between two products
 
 ## User Guide
-1. Locate and run the **inventory_management_program.py** in the main folder
+1. Locate and run the **inventory_management_program.py** in the root folder
 2. Follow the text prompts and provide first and last name, and a password
 3. User will be greeted by main menu prompt that will highlight the following choices:
    1. (V)iew Information on Inventory or Products
