@@ -20,7 +20,7 @@ Create an interactive command-line text program that allows a user to manage inv
 5. Starting out, the program will initialize a list of 5 default products each with a starting inventory of 10
 6. User can view, update, compare prices and once finished, they can enter **"Q"** to quit the program
 
-**To view the flowchart below, please install Markdown Preview (shd101wyy.markdown-preview-enhanced), and Markdown Preview Mermaid Support (bierner.markdown-mermaid) in VSCode**
+**To view the flowchart below, please install Markdown Preview (shd101wyy.markdown-preview-enhanced), and Markdown Preview Mermaid Support (bierner.markdown-mermaid) in VSCode and show preview**
 
 ## All User Choice Flows
 
