@@ -46,7 +46,7 @@ if __name__ == "__main__":
     # Initialize list of default starting products
     products = starting_products.init_product_list()
 
-    # ---------------- BEGIN UNITTEST SECTION ----------------
+    # ---------------- BEGIN UNITTEST SECTION ---------------------------------
 
     # Initialize instance of test product
     test_product = product.Product(
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 
     assert test_product.get_name() == "Real iPod", "Name unittest failed!"
 
-    # ---------------- END UNITTEST SECTION ----------------
+    # ---------------- END UNITTEST SECTION -----------------------------------
 
     # Initialize list of default starting inventory
     current_inventory = initialize_inventory.init_inventory(products)
